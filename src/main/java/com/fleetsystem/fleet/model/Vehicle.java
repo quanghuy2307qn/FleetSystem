@@ -78,9 +78,15 @@ public class Vehicle {
 	
 	private String remarks;
 
+	
+	
+	
+
 	public Vehicle() {
 		super();
 	}
+	
+	
 
 	public Vehicle(int id, String name, VehicleType vehicleType, Integer vehicletypeid, String vehicleNumber,
 			Date registrationDate, Date acquisitionDate, String description, VehicleMake vehicleMake,
@@ -111,6 +117,8 @@ public class Vehicle {
 		this.locationid = locationid;
 		this.remarks = remarks;
 	}
+
+
 
 	public int getId() {
 		return id;

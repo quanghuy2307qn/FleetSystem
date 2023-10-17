@@ -35,9 +35,14 @@ public class Location {
 		
 	private String city;
 	private String address;
+
+	
+	
 	public Location() {
 		super();
 	}
+	
+	
 	public Location(Integer id, String description, String details, Country country, Integer countryid, State state,
 			Integer stateid, String city, String address) {
 		super();
@@ -51,6 +56,8 @@ public class Location {
 		this.city = city;
 		this.address = address;
 	}
+
+
 	public Integer getId() {
 		return id;
 	}

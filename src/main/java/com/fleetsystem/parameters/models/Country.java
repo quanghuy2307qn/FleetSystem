@@ -98,6 +98,9 @@ public class Country {
 	public void setStates(List<State> states) {
 		this.states = states;
 	}
+
+	
+	
 	
 	
 }

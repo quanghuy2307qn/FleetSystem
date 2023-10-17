@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="_layout">
+
+<body>
+
+	<div layout:fragment="content">
+		<section class="wrapper">
+			<div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="fa fa fa-bars"></i> Invoice Add</h3>
+					<ol class="breadcrumb">
+						<li><i class="fa fa-home"></i><a href="/accounts">Accounts Home</a></li>
+						<li><i class="fa fa-bars"></i><a href="/accounts/invoices">Accounts List</a></li>
+						<li><i class="fa fa-square-o"></i>Invoice Add</li>
+					</ol>
+				</div>
+			</div>
+			<div class="container" style="width: 70%">
+				<div class="row justify-content-center">
+					<div class="col-lg-12">
+						<form class="form-horizontal">
+							<section class="panel">
+								<header class="panel-heading">
+									Editing Country Record
+								</header>
+								<div class="panel-body">
+									<div class="col-lg-6">
+										<section class="panel">
+											<div class="form-group row">
+												<label class="col-sm-4 col-form-label">Id:</label>
+												<div class="col-sm-6">
+													<input type="text" th:value="${invoice.id}" id="idEdit"
+														class="form-control" name="id" readonly>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label for="invoiceDateDetails" class="col-form-label">Invoice
+													Date:</label>
+												<input type="date" th:value="${invoice.invoiceDate}"
+													class="form-control" id="invoiceDateDetails" name="invoiceDate" readonly>
+											</div>
+
+
+											<div class="form-group">
+												<label for="ddlClientDetails" class="col-form-label">Client: </label>
+												<select class="form-control" id="ddlClientDetails" name="clientid" aria-readonly="true">
+													<option>-SELECT-</option>
+													<option th:each="client : ${clients}" th:value="${client.id}"
+														th:selected="${client.id} == ${invoice.clientid} ? True: False"
+														th:text="${client.name}">
+													</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label for="ddlInvoiceStatusDetails" class="col-form-label">Invoice
+													Status: </label>
+												<select class="form-control" id="ddlInvoiceStatusDetails"
+													name="invoicestatusid" aria-readonly="true">
+													<option>-SELECT-</option>
+													<option th:each="invoiceStatus : ${statuses}"
+														th:value="${invoiceStatus.id}"
+														th:selected="${invoiceStatus.id} == ${invoice.invoicestatusid} ? True: False"
+														th:text="${invoiceStatus.description}">
+													</option>
+												</select>
+											</div>
+
+
+											<div class="form-group">
+												<label for="remarksDetails" class="col-form-label">Remarks:</label>
+												<input type="text" class="form-control" th:value="${invoice.remarks}"
+													id="remarksDetails" name="remarks" readonly>
+											</div>
+
+										</section>
+									</div>
+
+								</div>
+							</section>
+
+							<section class="panel">
+
+								<div class="panel-body">
+								
+									<a href="/invoices" class="btn  btn-warning">
+										Exit
+									</a>
+								</div>
+							</section>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+
+</html>

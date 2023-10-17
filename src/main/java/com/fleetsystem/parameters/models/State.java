@@ -30,9 +30,15 @@ public class State {
 	
 	private String details;
 
+	
+	
+
 	public State() {
 		super();
 	}
+	
+	
+	
 
 	public State(Integer id, String name, String capital, String code, Country country, Integer countryid,
 			String details) {
@@ -45,6 +51,9 @@ public class State {
 		this.countryid = countryid;
 		this.details = details;
 	}
+
+
+
 
 	public Integer getId() {
 		return id;

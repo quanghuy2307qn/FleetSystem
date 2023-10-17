@@ -25,9 +25,14 @@ public class Contact {
 	private String email;
 	private String mobile;
 	private String remarks;
+
+	
+	
 	public Contact() {
 		super();
 	}
+	
+	
 	public Contact(int id, String firstname, String lastname, String phone, String email, String mobile,
 			String remarks) {
 		super();
@@ -39,6 +44,8 @@ public class Contact {
 		this.mobile = mobile;
 		this.remarks = remarks;
 	}
+
+
 	public int getId() {
 		return id;
 	}

@@ -25,7 +25,7 @@ public class EmployeeTypeController {
 	@GetMapping("/employeeTypes")
 	public String getAll(Model model) {
 		List<EmployeeType> employeeTypes = employeeTypeService.findAll();
-		model.addAttribute("emloyeeTypes",employeeTypes);
+		model.addAttribute("employeeTypes",employeeTypes);
 		return "hr/employeeType/employeeTypeList";
 	}
 	 //Get Job Title by id

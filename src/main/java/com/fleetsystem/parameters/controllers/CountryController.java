@@ -129,10 +129,9 @@ public class CountryController {
 		return "redirect:/countries";
 	}
 	
-	@RequestMapping(value = "/countries/update/{id}",method=RequestMethod.POST)
-	public String update(@PathVariable("id") Integer id,Country country) {
-		countryService.update(country, id);
+	@PostMapping("/updateCountry")
+	public String update(Country country) {
+		countryService.save(country);
 		return "redirect:/countries";
 	}
-	
 }

@@ -87,4 +87,10 @@ public class EmployeeController {
 		model.addAttribute("employee",employee);
 		return "parameters/hr/locationDetails";
 	}
+	
+	@RequestMapping(value="/employees/assignUsername")
+	public String assignUsername(int id) {
+		employeeService.assignUsername(id);
+		return "redirect:/employees";
+	}
 }

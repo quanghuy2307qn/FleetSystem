@@ -43,19 +43,9 @@ public class CountryService {
 		countryRepository.deleteById(id);
 	}
 	
-	public Country update(Country country,Integer id) {
-		Country fromDb = countryRepository.findById(id).orElse(null);
-		if(fromDb == null) {
-			return null;
-		}
-		fromDb.setCapital(country.getCapital());
-		fromDb.setCode(country.getCode());
-		fromDb.setContinent(country.getContinent());
-		fromDb.setDescription(country.getDescription());
-		fromDb.setNationality(country.getNationality());
-		return countryRepository.save(fromDb);
-		
-	}
+	 public void update(Country country) {
+	        countryRepository.save(country);
+	    }
 	public Country getById(Integer id) {
 		return countryRepository.findById(id).orElse(null);
 	}

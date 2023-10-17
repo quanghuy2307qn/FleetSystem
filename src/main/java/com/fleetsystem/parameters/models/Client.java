@@ -42,28 +42,6 @@ public class Client {
 	
 	private String details;
 
-	public Client() {
-		super();
-	}
-
-	public Client(int id, String name, String address, String city, String phone, String mobile, String website,
-			String email, Country country, Integer countryid, State state, Integer stateid, String details) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.address = address;
-		this.city = city;
-		this.phone = phone;
-		this.mobile = mobile;
-		this.website = website;
-		this.email = email;
-		this.country = country;
-		this.countryid = countryid;
-		this.state = state;
-		this.stateid = stateid;
-		this.details = details;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -167,6 +145,12 @@ public class Client {
 	public void setDetails(String details) {
 		this.details = details;
 	}
+
+	
+	
+	
+
+	
 	
 	
 	

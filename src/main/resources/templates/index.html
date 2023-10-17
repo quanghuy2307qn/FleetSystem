@@ -9,7 +9,7 @@
 	<meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
 	<link rel="shortcut icon" href="img/favicon.png">
 
-	<title>Creative - Bootstrap Admin Template</title>
+	<title>Fleet Management System</title>
 
 	<!-- Bootstrap CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -279,15 +279,15 @@
 					<li class="dropdown">
 						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 							<span class="profile-ava">
-								<img alt="" src="img/avatar1_small.jpg">
+								<img alt="" th:src="@{ '/img/photos/'  +  ${#authentication.getPrincipal().getUsername()} + '.jpg'}" height="38" width="38">
 							</span>
-							<span class="username">Jenifer Smith</span>
+							<span class="username" th:text="${#authentication.getPrincipal().getUsername()}">Guest</span>
 							<b class="caret"></b>
 						</a>
 						<ul class="dropdown-menu extended logout">
 							<div class="log-arrow-up"></div>
 							<li class="eborder-top">
-								<a href="#"><i class="icon_profile"></i> My Profile</a>
+								<a th:href="@{/profile}"><i class="icon_profile"></i> My Profile</a>
 							</li>
 							<li>
 								<a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
@@ -299,7 +299,7 @@
 								<a href="#"><i class="icon_chat_alt"></i> Chats</a>
 							</li>
 							<li>
-								<a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
+								<a th:href="@{/login}"><i class="icon_key_alt"></i> Log Out</ath>
 							</li>
 							<li>
 								<a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
@@ -1130,7 +1130,7 @@
 	<script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<!-- jQuery full calendar -->
-	<<script src="js/fullcalendar.min.js">
+	<script src="js/fullcalendar.min.js">
 		</script>
 		<!-- Full Google Calendar - Calendar -->
 		<script src="assets/fullcalendar/fullcalendar/fullcalendar.js"></script>

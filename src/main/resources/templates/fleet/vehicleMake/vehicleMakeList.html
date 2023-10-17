@@ -75,7 +75,7 @@
                 event.preventDefault();
                 var href = $(this).attr('href');
                 $.get(href, function (vehicleMake, status) {
-                    $('#txtId').val(vehicleMakes.id);
+                    $('#txtId').val(vehicleMake.id);
                     $('#txtDescription').val(vehicleMake.description);
                     $('#txtDetails').val(vehicleMake.details);
                 })

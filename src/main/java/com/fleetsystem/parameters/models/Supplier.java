@@ -40,10 +40,15 @@ public class Supplier {
 	
 	private String details;
 
+	
+	
+	
 	public Supplier() {
 		super();
 	}
 
+	
+	
 	public Supplier(int id, String name, String address, String city, String phone, String mobile, String website,
 			String email, Country country, Integer countryid, State state, Integer stateid, String details) {
 		super();
@@ -61,6 +66,8 @@ public class Supplier {
 		this.stateid = stateid;
 		this.details = details;
 	}
+
+
 
 	public int getId() {
 		return id;
@@ -165,6 +172,10 @@ public class Supplier {
 	public void setDetails(String details) {
 		this.details = details;
 	}
+
+	
+
+
 	
 	
 }

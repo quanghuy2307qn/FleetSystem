@@ -51,10 +51,15 @@ public class VehicleMaintenance {
 
 	private String remarks;
 
+	
+	
+
 	public VehicleMaintenance() {
 		super();
 	}
 
+	
+	
 	public VehicleMaintenance(int id, Vehicle vehicle, Integer vehicleid, Date startDate, Date endDate, String price,
 			Supplier supplier, Integer supplierid, String remarks) {
 		super();
@@ -68,6 +73,8 @@ public class VehicleMaintenance {
 		this.supplierid = supplierid;
 		this.remarks = remarks;
 	}
+
+
 
 	public int getId() {
 		return id;

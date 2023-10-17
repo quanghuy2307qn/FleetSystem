@@ -6,13 +6,17 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fleetsystem.hr.models.Employee;
 import com.fleetsystem.hr.models.EmployeeType;
+import com.fleetsystem.hr.repositories.EmployeeRepository;
 import com.fleetsystem.hr.repositories.EmployeeTypeRepository;
 
 @Service
 public class EmployeeTypeService {
 	@Autowired
 	private EmployeeTypeRepository employeeTypeRepository;
+	@Autowired
+	private EmployeeRepository employeeRepository;
 	
 	//Get All EmployeeTypes
 		public List<EmployeeType> findAll(){
@@ -33,5 +37,6 @@ public class EmployeeTypeService {
 		public void save( EmployeeType employeeType) {
 			employeeTypeRepository.save(employeeType);
 		}
+		
 	
 }
